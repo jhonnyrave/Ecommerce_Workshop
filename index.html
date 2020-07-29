@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="eCommerce.css">
     <title>Document</title>
@@ -14,7 +15,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-          
+           
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -37,11 +38,31 @@
                 <li class="nav-item">
                   <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
                 </li>
+                <li class="submenu">
+                  <img src="camisetas/cart.png" id="img-carrito">
+                  <div id="carrito">
+                          
+                          <table id="lista-carrito" class="u-full-width">
+                              <thead>
+                                  <tr>
+                                      <th>Imagen</th>
+                                      <th>Nombre</th>
+                                      <th>Precio</th>
+                                      <th></th>
+                                  </tr>
+                              </thead>
+                              <tbody></tbody>
+                          </table>
+
+                          <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                  </div>
+          </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
+
             </div>
           </nav>
 
@@ -71,66 +92,66 @@
 
             <h1>CAMISETAS</h1>
 
-            <div class="camisetas">
-
+            <div class="camisetas" id = "productos">
+          
                 <figure><img src="./camisetas/arsenal.jpg" alt="">
                     <h4>Camiseta Arsenal</h4>
                     <p>precio : 45.000</p>
-                    <input type="button" value="Comprar" data-id="1">
+                    <input type="button" value="Comprar" data-id="1" class="agregar-carrito">
                 </figure>
     
                 <figure><img src="./camisetas/real.jpg" alt="">
                     <h4>Camiseta Real Madrid</h4>
                     <p>Precio : 45.000 </p>
-                    <input type="button" value="Comprar" data-id="2">
+                    <input type="button" value="Comprar" data-id="2" class="agregar-carrito">
                 </figure>
 
                 <figure><img src="./camisetas/nal.jpg" alt="">
                     <h4>Camiseta Nacional</h4>
                     <p>Precio : 45.000 </p>
-                    <input type="button" value="Comprar" data-id="3">
+                    <input type="button" value="Comprar" data-id="3" class="agregar-carrito">
                 </figure>
 
                 <figure><img src="./camisetas/dim.jpg" alt="">
                    <h4>Camiseta Medellin</h4>
                    <p>Precio : 35.000 </p>
-                   <input type="button" value="Comprar" data-id="4">
+                   <input type="button" value="Comprar" data-id="4" class="agregar-carrito">
                 </figure>
 
                 <figure><img src="./camisetas/envigado.jpg" alt="">
                     <h4>Camiseta Envigado</h4>
                     <p>Precio : 45.000 </p>
-                    <input type="button" value="Comprar" data-id="5">
+                    <input type="button" value="Comprar" data-id="5" class="agregar-carrito">
                 </figure>
 
                 <figure><img src="./camisetas/manU.jpg" alt="">
                     <h4>Camiseta Manchester <br> United</h4>
                     <p>Precio : 45.000 </p>
-                    <input type="button" value="Comprar" data-id="6">
+                    <input type="button" value="Comprar" data-id="6" class="agregar-carrito">
                 </figure>
 
                 <figure><img src="./camisetas/dormun.jpg" alt="">
                     <h4>Camiseta Dormun</h4>
                     <p>Precio : 35.000 </p>
-                    <input type="button" value="Comprar" data-id="7">
+                    <input type="button" value="Comprar" data-id="7" class="agregar-carrito">
                 </figure>
 
                 <figure><img src="./camisetas/atalanta.jpg" alt="">
                     <h4>Camiseta Atalanta</h4>
                     <p>Precio : 45.000 </p>
-                    <input type="button" value="Comprar" data-id="8">
+                    <input type="button" value="Comprar" data-id="8" class="agregar-carrito">
                 </figure>
 
                 <figure><img src="./camisetas/juve.jpg" alt="">
                     <h4>Camiseta Juventus</h4>
                     <p>Precio : 45.000 </p>
-                    <input type="button" value="Comprar" data-id="9">
+                    <input type="button" value="Comprar" data-id="9" class="agregar-carrito">
                 </figure>
 
                 <figure><img src="./camisetas/liverpool.jpg" alt="">
                     <h4>Camiseta liverpool</h4>
                     <p>Precio : 45.000 </p>
-                    <input type="button" value="Comprar" data-id="9">
+                    <input type="button" value="Comprar" data-id="10" class="agregar-carrito">
                 </figure>
 
             </div>
@@ -138,7 +159,7 @@
         </section>
 
     </main>
-
+    <script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

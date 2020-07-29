@@ -28,3 +28,28 @@ input{
     margin-left: auto;
     margin-right: auto;
 }
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box;
+ }
